@@ -1,0 +1,31 @@
+[gd_scene load_steps=5 format=3 uid="uid://d0itr34bpp8r5"]
+
+[ext_resource type="Script" uid="uid://5nahllpbv5b0" path="res://robot.gd" id="1_8mo4m"]
+[ext_resource type="Resource" uid="uid://bof7ovn823w3j" path="res://expressions/neutral.tres" id="2_bjiqm"]
+[ext_resource type="PackedScene" uid="uid://bofrcd8pr500x" path="res://robot-model.glb" id="2_gr7he"]
+[ext_resource type="SpriteFrames" uid="uid://s0pvut8f384q" path="res://cues/eyes/eye-sprite-frames.tres" id="3_gr7he"]
+
+[node name="Robot" type="Node3D"]
+script = ExtResource("1_8mo4m")
+expression = ExtResource("2_bjiqm")
+
+[node name="model" parent="." instance=ExtResource("2_gr7he")]
+
+[node name="Base" parent="model" index="0"]
+transform = Transform3D(-4.371139e-08, -1, 0, 1, -4.371139e-08, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="LeftArm" parent="model" index="3"]
+transform = Transform3D(5.1719372e-08, 1.1832013, -2.1533388e-06, 1.1832013, -5.1719372e-08, 0, -9.412542e-14, -2.1533388e-06, -1.1832013, 1.6746175, 4.149704, -1.3020641)
+
+[node name="RightArm" parent="model" index="4"]
+transform = Transform3D(5.1719372e-08, 1.1832013, -2.1533388e-06, 1.1832013, -5.1719372e-08, 0, -9.412542e-14, -2.1533388e-06, -1.1832013, -1.674618, 4.149704, -1.3020641)
+
+[node name="FaceMesh" type="MeshInstance3D" parent="model/Cube" index="0"]
+transform = Transform3D(0.9333718, 0, 0, 0, 0.9333718, 0, 0, 0, 0.9333718, 0.0021883356, 0.836329, 1.9523734)
+skeleton = NodePath("../../..")
+
+[node name="EyesSprite" type="AnimatedSprite3D" parent="model/Cube/FaceMesh"]
+sprite_frames = ExtResource("3_gr7he")
+frame_progress = 1.0
+
+[editable path="model"]
