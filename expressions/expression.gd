@@ -28,7 +28,49 @@ class_name RobotExpression extends Resource
 
 
 @export_group("Face")
-@export_enum("default", "squint") var eyes: String = "default" :
+@export_enum(
+	"default",
+	"angled-top", 
+	"closed-down", 
+	"closed-flat", 
+	"closed-up", 
+	"exclamation-marks", 
+	"hearts", 
+	"open-big-pupils", 
+	"open-small-pupils", 
+	"squinting", 
+	"squished-by-cheeks", 
+	"wide-big-pupils", 
+	"wide-small-pupils"
+) var eyes: String = "default" :
 	set(new): 
 		eyes = new
+		emit_changed()
+
+@export_enum(
+	"default",
+	"big-smile-closed",
+	"big-smile-open",
+	"small-smile",
+	"frown-closed",
+	"frown-open",
+	"grimace",
+	"grin",
+	"circle",
+	"oval",
+) var mouth: String = "default" : 
+	set(new): 
+		mouth = new
+		emit_changed()
+
+@export_enum(
+	"default",
+	"arched",
+	"down",
+	"flat",
+	"slanted",
+	"furrowed"
+) var brows: String = "default" : 
+	set(new): 
+		brows = new
 		emit_changed()

@@ -5,5 +5,7 @@
 [resource]
 script = ExtResource("1_82wth")
 headZRotation = 15
-eyes = "squint"
+eyes = "squinting"
+mouth = "frown-closed"
+brows = "arched"
 metadata/_custom_type_script = "uid://bjykxxqurmt73"

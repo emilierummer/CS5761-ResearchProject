@@ -2,8 +2,8 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cx2umxgb4wjrt"
-path.s3tc="res://.godot/imported/eyes-squinting.png-afb0c366e9b061f9f16bf508eb5aaf73.s3tc.ctex"
+uid="uid://daahwyu75kaiw"
+path.s3tc="res://.godot/imported/temp-faces.png-33eb303f7ff974601a5e63c4b4c8ba38.s3tc.ctex"
 metadata={
 "imported_formats": ["s3tc_bptc"],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://cues/eyes/eyes-squinting.png"
-dest_files=["res://.godot/imported/eyes-squinting.png-afb0c366e9b061f9f16bf508eb5aaf73.s3tc.ctex"]
+source_file="res://cues/temp-faces.png"
+dest_files=["res://.godot/imported/temp-faces.png-33eb303f7ff974601a5e63c4b4c8ba38.s3tc.ctex"]
 
 [params]
 
