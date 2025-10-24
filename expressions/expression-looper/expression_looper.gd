@@ -2,7 +2,8 @@
 # since they are tied to specific emotions already
 extends Node3D
 
-const MAX_EXPRESSIONS: int = 50
+# Maximum number of expressions to show (-1 for all)
+const MAX_EXPRESSIONS: int = -1
 
 # Model
 @onready var Robot: RobotType = $Robot
@@ -25,18 +26,15 @@ func _ready():
     var browCues = Robot.BrowsSprite.sprite_frames.get_animation_names()
     var mouthCues = Robot.MouthSprite.sprite_frames.get_animation_names()
     # var extrasCues = Robot.ExtrasSprite.sprite_frames.get_animation_names()
-    
-    # The default expression is always first, so we don't add it to avoid repetition
-    eyeCues.erase("default")
-    browCues.erase("default")
-    mouthCues.erase("default")
-    # extrasCues.erase("none")
 
     # Generate all combinations of expressions
     for eye in eyeCues:
         for brow in browCues:
             for mouth in mouthCues:
                 # for extras in extrasCues:
+                    # The default expression is always first, so we don't add it to avoid repetition
+                    if eye == "default" and brow == "default" and mouth == "default": # and extras == "default":
+                        continue
                     var expr = RobotExpression.new()
                     expr.eyes = eye
                     expr.brows = brow
@@ -49,7 +47,8 @@ func _ready():
     # Re-add the default expression at the start
     expressions.insert(0, RobotExpression.new())
     # Limit to MAX_EXPRESSIONS
-    expressions = expressions.slice(0, MAX_EXPRESSIONS)
+    if MAX_EXPRESSIONS > 0 and expressions.size() > MAX_EXPRESSIONS:
+        expressions = expressions.slice(0, MAX_EXPRESSIONS)
     totalExpressions = expressions.size()
 
     # Update the model and labels

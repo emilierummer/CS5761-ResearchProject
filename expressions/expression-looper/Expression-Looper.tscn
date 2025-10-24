@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://nq8gdevpk1lg"]
+[gd_scene load_steps=8 format=3 uid="uid://nq8gdevpk1lg"]
 
 [ext_resource type="Script" uid="uid://vuux1p8sxhjj" path="res://expressions/expression-looper/expression_looper.gd" id="1_tye5m"]
 [ext_resource type="PackedScene" uid="uid://d0itr34bpp8r5" path="res://Robot.tscn" id="2_a84vy"]
+[ext_resource type="Theme" uid="uid://g2n5hnjd4b6c" path="res://expressions/initial-survey/minimal_theme.tres" id="3_a84vy"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_tye5m"]
 device = -1
@@ -35,6 +36,7 @@ anchor_bottom = 1.0
 offset_top = -159.0
 offset_right = 147.0
 grow_vertical = 0
+theme = ExtResource("3_a84vy")
 
 [node name="MarginContainer" type="MarginContainer" parent="Panel"]
 layout_mode = 2

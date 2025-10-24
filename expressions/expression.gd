@@ -58,6 +58,8 @@ class_name RobotExpression extends Resource
 	"grin",
 	"circle",
 	"oval",
+	"cry-closed",
+	"cry-open"
 ) var mouth: String = "default" : 
 	set(new): 
 		mouth = new

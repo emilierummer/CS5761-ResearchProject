@@ -1,4 +1,4 @@
-[gd_resource type="SpriteFrames" load_steps=12 format=3 uid="uid://bfc73gedot67p"]
+[gd_resource type="SpriteFrames" load_steps=14 format=3 uid="uid://bfc73gedot67p"]
 
 [ext_resource type="Texture2D" uid="uid://daahwyu75kaiw" path="res://cues/temp-faces.png" id="1_vko5n"]
 
@@ -13,6 +13,14 @@ region = Rect2(1007, 2604, 412, 412)
 [sub_resource type="AtlasTexture" id="AtlasTexture_5uh8e"]
 atlas = ExtResource("1_vko5n")
 region = Rect2(591, 3436, 412, 412)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxcxn"]
+atlas = ExtResource("1_vko5n")
+region = Rect2(175, 4268, 412, 412)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uae62"]
+atlas = ExtResource("1_vko5n")
+region = Rect2(591, 4268, 412, 412)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_snsub"]
 atlas = ExtResource("1_vko5n")
@@ -66,6 +74,22 @@ animations = [{
 }],
 "loop": false,
 "name": &"circle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxcxn")
+}],
+"loop": false,
+"name": &"cry-closed",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uae62")
+}],
+"loop": false,
+"name": &"cry-open",
 "speed": 5.0
 }, {
 "frames": [{
