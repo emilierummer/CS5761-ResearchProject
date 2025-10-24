@@ -1,5 +1,5 @@
 @tool
-extends Node3D
+class_name RobotType extends Node3D
 
 @export var movementDuration: float = 1.0
 @export var expression: RobotExpression :
@@ -21,7 +21,6 @@ extends Node3D
 
 
 func handleExpressionChanged(newExpression: RobotExpression):
-	print("handleExpressionChanged called")
 	if LeftArm: animateRotation("x", LeftArm, newExpression.leftArmRotation)
 	if RightArm: animateRotation("x", RightArm, newExpression.rightArmRotation)
 	if Head: 

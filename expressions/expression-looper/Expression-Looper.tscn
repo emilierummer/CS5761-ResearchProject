@@ -1,0 +1,97 @@
+[gd_scene load_steps=7 format=3 uid="uid://nq8gdevpk1lg"]
+
+[ext_resource type="Script" uid="uid://vuux1p8sxhjj" path="res://expressions/expression-looper/expression_looper.gd" id="1_tye5m"]
+[ext_resource type="PackedScene" uid="uid://d0itr34bpp8r5" path="res://Robot.tscn" id="2_a84vy"]
+
+[sub_resource type="InputEventKey" id="InputEventKey_tye5m"]
+device = -1
+keycode = 4194319
+
+[sub_resource type="Shortcut" id="Shortcut_a84vy"]
+events = [SubResource("InputEventKey_tye5m")]
+
+[sub_resource type="InputEventKey" id="InputEventKey_mlx6t"]
+device = -1
+keycode = 4194321
+
+[sub_resource type="Shortcut" id="Shortcut_5ojkh"]
+events = [SubResource("InputEventKey_mlx6t")]
+
+[node name="ExpressionLooper" type="Node3D"]
+script = ExtResource("1_tye5m")
+
+[node name="Robot" parent="." instance=ExtResource("2_a84vy")]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 6.2062197, 1.5721245)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+light_specular = 0.2
+
+[node name="Panel" type="PanelContainer" parent="."]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -159.0
+offset_right = 147.0
+grow_vertical = 0
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 2
+theme_override_constants/margin_left = 32
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 32
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="LabelsContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="EyesLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/LabelsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Eyes: default (0/0)"
+
+[node name="BrowsLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/LabelsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Brows: default (0/0)"
+
+[node name="MouthLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/LabelsContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Mouth: default (0/0)"
+
+[node name="ExtrasLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/LabelsContainer"]
+unique_name_in_owner = true
+visible = false
+layout_mode = 2
+text = "Extras: none (0/0)"
+
+[node name="TotalLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Total: 0/0"
+
+[node name="ButtonsContainer" type="HBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+layout_mode = 2
+
+[node name="PrevButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+shortcut = SubResource("Shortcut_a84vy")
+text = "Prev"
+
+[node name="Separator" type="Control" parent="Panel/MarginContainer/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="NextButton" type="Button" parent="Panel/MarginContainer/VBoxContainer/ButtonsContainer"]
+layout_mode = 2
+shortcut = SubResource("Shortcut_5ojkh")
+text = "Next"
+
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/ButtonsContainer/PrevButton" to="." method="_on_PrevButton_pressed"]
+[connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/ButtonsContainer/NextButton" to="." method="_on_NextButton_pressed"]
