@@ -1,0 +1,54 @@
+[gd_resource type="SpriteFrames" load_steps=6 format=3 uid="uid://dx0qtoly318uv"]
+
+[ext_resource type="Texture2D" uid="uid://n00nq3bny7pa" path="res://cues/extras.png" id="1_21601"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfshr"]
+atlas = ExtResource("1_21601")
+region = Rect2(412, 0, 412, 412)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wgvxc"]
+atlas = ExtResource("1_21601")
+region = Rect2(824, 0, 412, 412)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21601"]
+atlas = ExtResource("1_21601")
+region = Rect2(1236, 0, 412, 412)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rfrrx"]
+atlas = ExtResource("1_21601")
+region = Rect2(0, 0, 412, 412)
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfshr")
+}],
+"loop": false,
+"name": &"exclamation-mark",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wgvxc")
+}],
+"loop": false,
+"name": &"forehead-vein",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21601")
+}],
+"loop": false,
+"name": &"none",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rfrrx")
+}],
+"loop": false,
+"name": &"tears",
+"speed": 5.0
+}]

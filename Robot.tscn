@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://d0itr34bpp8r5"]
+[gd_scene load_steps=8 format=3 uid="uid://d0itr34bpp8r5"]
 
 [ext_resource type="Script" uid="uid://5nahllpbv5b0" path="res://robot.gd" id="1_8mo4m"]
 [ext_resource type="Resource" uid="uid://bof7ovn823w3j" path="res://expressions/neutral.tres" id="2_bjiqm"]
@@ -6,6 +6,7 @@
 [ext_resource type="SpriteFrames" uid="uid://s0pvut8f384q" path="res://cues/eye-sprite-frames.tres" id="3_gr7he"]
 [ext_resource type="SpriteFrames" uid="uid://4t0ebnnd0m1c" path="res://cues/brow-spite-frames.tres" id="4_yxrqh"]
 [ext_resource type="SpriteFrames" uid="uid://bfc73gedot67p" path="res://cues/mouth-sprite-frames.tres" id="5_mfgf5"]
+[ext_resource type="SpriteFrames" uid="uid://dx0qtoly318uv" path="res://cues/extras-sprite-frames.tres" id="7_dmtm7"]
 
 [node name="Robot" type="Node3D"]
 script = ExtResource("1_8mo4m")
@@ -37,5 +38,10 @@ sprite_frames = ExtResource("3_gr7he")
 [node name="MouthSprite" type="AnimatedSprite3D" parent="model/Cube/FaceMesh"]
 transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0, -0.5559702, -1.1025424)
 sprite_frames = ExtResource("5_mfgf5")
+
+[node name="ExtrasSprite" type="AnimatedSprite3D" parent="model/Cube/FaceMesh"]
+transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, -0.0048971176, -1.1025424)
+sprite_frames = ExtResource("7_dmtm7")
+animation = &"none"
 
 [editable path="model"]

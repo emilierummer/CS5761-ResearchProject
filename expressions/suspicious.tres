@@ -8,4 +8,5 @@ headZRotation = 15
 eyes = "squinting"
 mouth = "frown-closed"
 brows = "arched"
+extras = "tears"
 metadata/_custom_type_script = "uid://bjykxxqurmt73"

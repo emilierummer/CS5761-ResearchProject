@@ -15,6 +15,9 @@ extends Node3D
 @onready var Head: MeshInstance3D = $"model/Cube"
 
 @onready var EyesSprite: AnimatedSprite3D = $"model/Cube/FaceMesh/EyesSprite"
+@onready var BrowsSprite: AnimatedSprite3D = $"model/Cube/FaceMesh/BrowsSprite"
+@onready var MouthSprite: AnimatedSprite3D = $"model/Cube/FaceMesh/MouthSprite"
+@onready var ExtrasSprite: AnimatedSprite3D = $"model/Cube/FaceMesh/ExtrasSprite"
 
 
 func handleExpressionChanged(newExpression: RobotExpression):
@@ -28,6 +31,9 @@ func handleExpressionChanged(newExpression: RobotExpression):
 			newExpression.headZRotation
 		))
 	if EyesSprite: changeCues(EyesSprite, newExpression.eyes)
+	if BrowsSprite: changeCues(BrowsSprite, newExpression.brows)
+	if MouthSprite: changeCues(MouthSprite, newExpression.mouth)
+	if ExtrasSprite: changeCues(ExtrasSprite, newExpression.extras)
 
 
 func animateRotation(axis, mesh, targetRotation):

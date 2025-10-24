@@ -74,3 +74,13 @@ class_name RobotExpression extends Resource
 	set(new): 
 		brows = new
 		emit_changed()
+
+@export_enum(
+	"none",
+	"tears",
+	"exclamation-mark",
+	"forehead-vein"
+) var extras: String = "none" : 
+	set(new): 
+		extras = new
+		emit_changed()
