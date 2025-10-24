@@ -1,35 +1,11 @@
-[gd_scene load_steps=14 format=3 uid="uid://d0itr34bpp8r5"]
+[gd_scene load_steps=7 format=3 uid="uid://d0itr34bpp8r5"]
 
 [ext_resource type="Script" uid="uid://5nahllpbv5b0" path="res://robot.gd" id="1_8mo4m"]
 [ext_resource type="Resource" uid="uid://bof7ovn823w3j" path="res://expressions/neutral.tres" id="2_bjiqm"]
 [ext_resource type="PackedScene" uid="uid://bofrcd8pr500x" path="res://robot-model.glb" id="2_gr7he"]
 [ext_resource type="SpriteFrames" uid="uid://s0pvut8f384q" path="res://cues/eye-sprite-frames.tres" id="3_gr7he"]
-[ext_resource type="Shader" uid="uid://ue2y743scxe4" path="res://shaders/brows.gdshader" id="4_dmtm7"]
 [ext_resource type="SpriteFrames" uid="uid://4t0ebnnd0m1c" path="res://cues/brow-spite-frames.tres" id="4_yxrqh"]
-[ext_resource type="Texture2D" uid="uid://daahwyu75kaiw" path="res://cues/temp-faces.png" id="5_crsa2"]
 [ext_resource type="SpriteFrames" uid="uid://bfc73gedot67p" path="res://cues/mouth-sprite-frames.tres" id="5_mfgf5"]
-[ext_resource type="Shader" uid="uid://bm5c68vx0ixcu" path="res://shaders/mouth.gdshader" id="8_pdxcx"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_1v03d"]
-atlas = ExtResource("5_crsa2")
-region = Rect2(591, 3852, 412, 412)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_crsa2"]
-render_priority = 0
-shader = ExtResource("4_dmtm7")
-shader_parameter/tex = SubResource("AtlasTexture_1v03d")
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_snsub"]
-atlas = ExtResource("5_crsa2")
-region = Rect2(1007, 3852, 412, 412)
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_pdxcx"]
-render_priority = 0
-shader = ExtResource("8_pdxcx")
-shader_parameter/tex = SubResource("AtlasTexture_snsub")
-shader_parameter/edge_color = Color(1, 0, 0, 1)
-shader_parameter/threshold = 0.5
-shader_parameter/thickness = 1.5
 
 [node name="Robot" type="Node3D"]
 script = ExtResource("1_8mo4m")
@@ -52,18 +28,14 @@ skeleton = NodePath("../../..")
 
 [node name="BrowsSprite" type="AnimatedSprite3D" parent="model/Cube/FaceMesh"]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, -0.12867594, -1.1025424)
-material_override = SubResource("ShaderMaterial_crsa2")
 sprite_frames = ExtResource("4_yxrqh")
 
 [node name="EyesSprite" type="AnimatedSprite3D" parent="model/Cube/FaceMesh"]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, -0.0048971176, -1.1025424)
 sprite_frames = ExtResource("3_gr7he")
-animation = &"angled-top"
 
 [node name="MouthSprite" type="AnimatedSprite3D" parent="model/Cube/FaceMesh"]
 transform = Transform3D(0.12, 0, 0, 0, 0.12, 0, 0, 0, 0.12, 0, -0.5559702, -1.1025424)
-material_override = SubResource("ShaderMaterial_pdxcx")
 sprite_frames = ExtResource("5_mfgf5")
-animation = &"frown-open"
 
 [editable path="model"]
