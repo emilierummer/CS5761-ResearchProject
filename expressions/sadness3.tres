@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="RobotExpression" load_steps=2 format=3 uid="uid://dd1dhh78yy8b0"]
+
+[ext_resource type="Script" uid="uid://bjykxxqurmt73" path="res://expressions/expression.gd" id="1_le8ch"]
+
+[resource]
+script = ExtResource("1_le8ch")
+eyes = "angled-top"
+mouth = "grimace"
+brows = "down"
+metadata/_custom_type_script = "uid://bjykxxqurmt73"

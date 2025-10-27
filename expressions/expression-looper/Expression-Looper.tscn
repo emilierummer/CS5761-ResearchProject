@@ -1,8 +1,27 @@
-[gd_scene load_steps=8 format=3 uid="uid://nq8gdevpk1lg"]
+[gd_scene load_steps=27 format=3 uid="uid://nq8gdevpk1lg"]
 
 [ext_resource type="Script" uid="uid://vuux1p8sxhjj" path="res://expressions/expression-looper/expression_looper.gd" id="1_tye5m"]
 [ext_resource type="PackedScene" uid="uid://d0itr34bpp8r5" path="res://Robot.tscn" id="2_a84vy"]
+[ext_resource type="Script" uid="uid://bjykxxqurmt73" path="res://expressions/expression.gd" id="2_d6k3k"]
 [ext_resource type="Theme" uid="uid://g2n5hnjd4b6c" path="res://expressions/initial-survey/minimal_theme.tres" id="3_a84vy"]
+[ext_resource type="Resource" uid="uid://bnpcnwhlyrhy7" path="res://expressions/angry1.tres" id="3_up0ci"]
+[ext_resource type="Resource" uid="uid://b4w5msax0n2or" path="res://expressions/angry2.tres" id="4_qgwrj"]
+[ext_resource type="Resource" uid="uid://4vuohh6x3wxd" path="res://expressions/angry3.tres" id="5_2xcsu"]
+[ext_resource type="Resource" uid="uid://clgmq1akx0fja" path="res://expressions/fear1.tres" id="6_vhnvi"]
+[ext_resource type="Resource" uid="uid://crr4077qptuek" path="res://expressions/fear2.tres" id="7_o4uap"]
+[ext_resource type="Resource" uid="uid://bn2ln1r1ys1b3" path="res://expressions/fear3.tres" id="8_jhoa3"]
+[ext_resource type="Resource" uid="uid://ck478tn4dy2a" path="res://expressions/joy1.tres" id="9_p0clt"]
+[ext_resource type="Resource" uid="uid://db3kjokuo26rm" path="res://expressions/joy2.tres" id="10_nsqwd"]
+[ext_resource type="Resource" uid="uid://cxw0bwsa4klxk" path="res://expressions/joy3.tres" id="11_8o7do"]
+[ext_resource type="Resource" uid="uid://bymdmswmduoc2" path="res://expressions/love1.tres" id="12_f6t7l"]
+[ext_resource type="Resource" uid="uid://l47aqurrjtki" path="res://expressions/love2.tres" id="13_1qoc6"]
+[ext_resource type="Resource" uid="uid://6dbrii24jlbt" path="res://expressions/love3.tres" id="14_x35hu"]
+[ext_resource type="Resource" uid="uid://dswnmaqbhcnl2" path="res://expressions/sadness1.tres" id="15_rwjl7"]
+[ext_resource type="Resource" uid="uid://dfebw42fec1sn" path="res://expressions/sadness2.tres" id="16_decsq"]
+[ext_resource type="Resource" uid="uid://dd1dhh78yy8b0" path="res://expressions/sadness3.tres" id="17_vmqnh"]
+[ext_resource type="Resource" uid="uid://cc4uklh856ldg" path="res://expressions/surprise1.tres" id="18_ul70v"]
+[ext_resource type="Resource" uid="uid://ln7agqnmebpf" path="res://expressions/surprise2.tres" id="19_pgjpk"]
+[ext_resource type="Resource" uid="uid://bjr6mt0v1edpv" path="res://expressions/surprise3.tres" id="20_7jflk"]
 
 [sub_resource type="InputEventKey" id="InputEventKey_tye5m"]
 device = -1
@@ -20,6 +39,8 @@ events = [SubResource("InputEventKey_mlx6t")]
 
 [node name="ExpressionLooper" type="Node3D"]
 script = ExtResource("1_tye5m")
+randomizeOrder = false
+expressions = Array[ExtResource("2_d6k3k")]([ExtResource("3_up0ci"), ExtResource("4_qgwrj"), ExtResource("5_2xcsu"), ExtResource("6_vhnvi"), ExtResource("7_o4uap"), ExtResource("8_jhoa3"), ExtResource("9_p0clt"), ExtResource("10_nsqwd"), ExtResource("11_8o7do"), ExtResource("12_f6t7l"), ExtResource("13_1qoc6"), ExtResource("14_x35hu"), ExtResource("15_rwjl7"), ExtResource("16_decsq"), ExtResource("17_vmqnh"), ExtResource("18_ul70v"), ExtResource("19_pgjpk"), ExtResource("20_7jflk")])
 
 [node name="Robot" parent="." instance=ExtResource("2_a84vy")]
 
@@ -50,6 +71,7 @@ layout_mode = 2
 theme_override_constants/separation = 16
 
 [node name="LabelsContainer" type="VBoxContainer" parent="Panel/MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 
 [node name="EyesLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer/LabelsContainer"]

@@ -50,7 +50,7 @@ class_name RobotExpression extends Resource
 @export_enum(
 	"default",
 	"big-smile-closed",
-	"big-smile-open",
+	"big-smile-opened",
 	"small-smile",
 	"frown-closed",
 	"frown-open",
