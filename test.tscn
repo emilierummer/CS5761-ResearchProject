@@ -1,12 +1,13 @@
-[gd_scene load_steps=8 format=3 uid="uid://b4shkq1dtw6x1"]
+[gd_scene load_steps=9 format=3 uid="uid://b4shkq1dtw6x1"]
 
-[ext_resource type="Script" uid="uid://buwj6e707niei" path="res://test.gd" id="1_6uqi0"]
+[ext_resource type="Script" path="res://test.gd" id="1_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://d0itr34bpp8r5" path="res://Robot.tscn" id="1_37kl0"]
 [ext_resource type="Script" uid="uid://bjykxxqurmt73" path="res://expressions/expression.gd" id="2_vbegm"]
 [ext_resource type="Resource" uid="uid://bnpcnwhlyrhy7" path="res://expressions/angry1.tres" id="3_ehkex"]
 [ext_resource type="Resource" uid="uid://ck478tn4dy2a" path="res://expressions/joy1.tres" id="4_xersf"]
 [ext_resource type="Resource" uid="uid://clgmq1akx0fja" path="res://expressions/fear1.tres" id="5_00tp4"]
 [ext_resource type="Resource" uid="uid://bof7ovn823w3j" path="res://expressions/neutral.tres" id="6_ehkex"]
+[ext_resource type="PackedScene" uid="uid://e7d4chb43vmc" path="res://Room.tscn" id="8_ehkex"]
 
 [node name="Test" type="Node3D"]
 script = ExtResource("1_6uqi0")
@@ -14,11 +15,13 @@ expressions = Array[ExtResource("2_vbegm")]([ExtResource("3_ehkex"), ExtResource
 defaultExpression = ExtResource("6_ehkex")
 
 [node name="Robot" parent="." instance=ExtResource("1_37kl0")]
+transform = Transform3D(0.175, 0, 0, 0, 0.175, 0, 0, 0, 0.175, 0, 1.0429147, -0.08456537)
 
 [node name="XROrigin3D" type="XROrigin3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10.482818)
 
 [node name="XRCamera3D" type="XRCamera3D" parent="XROrigin3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2, -8.56)
 current = true
 
 [node name="FinalLabel" type="Label3D" parent="XROrigin3D/XRCamera3D"]
@@ -37,6 +40,9 @@ one_shot = true
 [node name="MicroexpressionTimer" type="Timer" parent="."]
 wait_time = 60.0
 one_shot = true
+
+[node name="Room" parent="." instance=ExtResource("8_ehkex")]
+transform = Transform3D(0.44, 0, 0, 0, 0.44, 0, 0, 0, 0.44, 0, 0, 0)
 
 [connection signal="button_released" from="XROrigin3D/XRController3D" to="." method="_on_button_pressed"]
 [connection signal="timeout" from="TotalTimer" to="." method="_on_expression_done"]

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://e7d4chb43vmc"]
+
+[ext_resource type="PackedScene" uid="uid://w8cvps3qfkft" path="res://room-model/room.glb" id="1_gw2vq"]
+[ext_resource type="PackedScene" uid="uid://bh5swsdivvtdm" path="res://table-model/table.glb" id="2_5ruuo"]
+
+[node name="Room" type="Node3D"]
+
+[node name="room" parent="." instance=ExtResource("1_gw2vq")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 0, 0, 0)
+
+[node name="table" parent="." instance=ExtResource("2_5ruuo")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 15.890296, 0)
+light_color = Color(1, 0.96862745, 0.827451, 1)
+light_energy = 4.5
+omni_range = 26.234
