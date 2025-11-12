@@ -70,6 +70,7 @@ func _ready():
 	totalExpressions = expressions.size()
 
 	# Update the model and labels
+	update_robot()
 	update_labels()
 
 func update_labels():

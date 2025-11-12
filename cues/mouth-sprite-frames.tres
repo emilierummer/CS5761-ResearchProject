@@ -15,9 +15,9 @@ region = Rect2(896, 2240, 448, 448)
 atlas = ExtResource("1_kdnea")
 region = Rect2(448, 3136, 448, 448)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_uxcxn"]
-atlas = ExtResource("1_vko5n")
-region = Rect2(175, 4268, 412, 412)
+[sub_resource type="AtlasTexture" id="AtlasTexture_kdnea"]
+atlas = ExtResource("1_kdnea")
+region = Rect2(0, 4032, 448, 448)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uae62"]
 atlas = ExtResource("1_vko5n")
@@ -79,7 +79,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uxcxn")
+"texture": SubResource("AtlasTexture_kdnea")
 }],
 "loop": false,
 "name": &"cry-closed",

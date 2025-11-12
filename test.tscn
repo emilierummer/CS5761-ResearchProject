@@ -41,7 +41,7 @@ current = true
 
 [node name="FinalLabel" type="Label3D" parent="XROrigin3D/XRCamera3D"]
 unique_name_in_owner = true
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.283741)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1780777)
 text = "Please take off the VR headset"
 
 [node name="XRController3D" type="XRController3D" parent="XROrigin3D"]

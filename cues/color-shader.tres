@@ -6,4 +6,6 @@
 [resource]
 render_priority = 0
 shader = ExtResource("1_wwial")
+shader_parameter/color = Vector3(60, 255, 0)
+shader_parameter/THRESHOLD = 0.5
 shader_parameter/TEXTURE = ExtResource("2_d3bly")
