@@ -31,6 +31,7 @@ func show_expression():
 	print("   Eyes: ", currentExpression.eyes)
 	print("   Brows: ", currentExpression.brows)
 	print("   Mouth: ", currentExpression.mouth)
+	print("   Color: ", currentExpression.color)
 	# Set expression
 	TotalTimer.start(10.0)
 	expressionShowing = false
@@ -48,6 +49,7 @@ func _on_microexpression_done():
 		Robot.expression = currentExpression
 
 func _on_expression_done():
+	print("Expression done")
 	MicroexpressionTimer.stop()
 	expressionCounter += 1
 	MessagePanel.visible = true

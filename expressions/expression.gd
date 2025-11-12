@@ -28,7 +28,7 @@ class_name RobotExpression extends Resource
 
 
 @export_group("Face")
-@export_color_no_alpha var color: Color = Color("#bcbcbc") :
+@export_color_no_alpha var color: Color = Color("#3cff00") :
 	set(new):
 		color = new
 		emit_changed()

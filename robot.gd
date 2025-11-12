@@ -49,10 +49,11 @@ func animateRotation(axis, mesh, targetRotation):
 
 func changeCues(sprite: AnimatedSprite3D, newExpression: StringName):
 	if sprite.animation == newExpression: return
-	sprite.play_backwards(sprite.animation)
-	await sprite.animation_finished
+	#sprite.play_backwards(sprite.animation)
+	#await sprite.animation_finished
 	sprite.animation = newExpression
-	sprite.play(sprite.animation)
+	#sprite.play(sprite.animation)
+	sprite.set_frame_and_progress(0, 1.0)
 	await sprite.animation_finished
 
 func changeColor(shader: ShaderMaterial, newColor: Color):

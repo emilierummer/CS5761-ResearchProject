@@ -1,7 +1,7 @@
 shader_type spatial;
 
-uniform vec3 color = vec3(188, 188, 188);
-uniform float THRESHOLD = 0.5;
+uniform vec3 color = vec3(60, 255, 0);
+uniform float THRESHOLD = 0.75;
 uniform sampler2D TEXTURE : source_color;
 
 void fragment() {
