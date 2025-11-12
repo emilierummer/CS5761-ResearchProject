@@ -9,6 +9,7 @@ class_name RobotType extends Node3D
 		expression = newExpression
 		handleExpressionChanged(newExpression)
 
+@export var colorShader: ShaderMaterial
 
 @onready var RightArm: MeshInstance3D = $"model/RightArm"
 @onready var LeftArm: MeshInstance3D = $"model/LeftArm"
@@ -33,6 +34,7 @@ func handleExpressionChanged(newExpression: RobotExpression):
 	if BrowsSprite: changeCues(BrowsSprite, newExpression.brows)
 	if MouthSprite: changeCues(MouthSprite, newExpression.mouth)
 	if ExtrasSprite: changeCues(ExtrasSprite, newExpression.extras)
+	if colorShader: changeColor(colorShader, newExpression.color)
 
 
 func animateRotation(axis, mesh, targetRotation):
@@ -52,3 +54,6 @@ func changeCues(sprite: AnimatedSprite3D, newExpression: StringName):
 	sprite.animation = newExpression
 	sprite.play(sprite.animation)
 	await sprite.animation_finished
+
+func changeColor(shader: ShaderMaterial, newColor: Color):
+	shader.set_shader_parameter("color", newColor)

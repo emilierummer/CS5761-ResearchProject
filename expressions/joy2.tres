@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_nlfy2")
+color = Color(1, 1, 0, 1)
 eyes = "closed-down"
 mouth = "big-smile-closed"
 metadata/_custom_type_script = "uid://bjykxxqurmt73"

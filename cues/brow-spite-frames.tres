@@ -1,36 +1,36 @@
 [gd_resource type="SpriteFrames" load_steps=8 format=3 uid="uid://4t0ebnnd0m1c"]
 
-[ext_resource type="Texture2D" uid="uid://daahwyu75kaiw" path="res://cues/temp-faces.png" id="1_fpcs4"]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_fpcs4"]
-atlas = ExtResource("1_fpcs4")
-region = Rect2(591, 1772, 412, 412)
+[ext_resource type="Texture2D" uid="uid://b5efdpxs4mlm0" path="res://cues/final-faces.png" id="1_fpcs4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1v03d"]
 atlas = ExtResource("1_fpcs4")
-region = Rect2(591, 3852, 412, 412)
+region = Rect2(448, 1792, 448, 224)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3leix"]
 atlas = ExtResource("1_fpcs4")
-region = Rect2(175, 2188, 412, 412)
+region = Rect2(448, 3584, 448, 224)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p42g7"]
 atlas = ExtResource("1_fpcs4")
-region = Rect2(175, 1772, 412, 412)
+region = Rect2(448, 2016, 448, 224)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_224g6"]
 atlas = ExtResource("1_fpcs4")
-region = Rect2(1007, 1772, 412, 412)
+region = Rect2(0, 1792, 448, 224)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_y43pj"]
 atlas = ExtResource("1_fpcs4")
-region = Rect2(591, 2188, 412, 412)
+region = Rect2(896, 1792, 448, 224)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6tfd5"]
+atlas = ExtResource("1_fpcs4")
+region = Rect2(896, 2016, 448, 224)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fpcs4")
+"texture": SubResource("AtlasTexture_1v03d")
 }],
 "loop": false,
 "name": &"arched",
@@ -38,7 +38,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1v03d")
+"texture": SubResource("AtlasTexture_3leix")
 }],
 "loop": false,
 "name": &"default",
@@ -46,7 +46,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_3leix")
+"texture": SubResource("AtlasTexture_p42g7")
 }],
 "loop": false,
 "name": &"down",
@@ -54,7 +54,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_p42g7")
+"texture": SubResource("AtlasTexture_224g6")
 }],
 "loop": false,
 "name": &"flat",
@@ -62,7 +62,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_224g6")
+"texture": SubResource("AtlasTexture_y43pj")
 }],
 "loop": false,
 "name": &"furrowed",
@@ -70,7 +70,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_y43pj")
+"texture": SubResource("AtlasTexture_6tfd5")
 }],
 "loop": false,
 "name": &"slanted",

@@ -1,18 +1,19 @@
-[gd_resource type="SpriteFrames" load_steps=14 format=3 uid="uid://bfc73gedot67p"]
+[gd_resource type="SpriteFrames" load_steps=15 format=3 uid="uid://bfc73gedot67p"]
 
+[ext_resource type="Texture2D" uid="uid://b5efdpxs4mlm0" path="res://cues/final-faces.png" id="1_kdnea"]
 [ext_resource type="Texture2D" uid="uid://daahwyu75kaiw" path="res://cues/temp-faces.png" id="1_vko5n"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vko5n"]
-atlas = ExtResource("1_vko5n")
-region = Rect2(175, 2604, 412, 412)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_kdnea"]
-atlas = ExtResource("1_vko5n")
-region = Rect2(1007, 2604, 412, 412)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_5uh8e"]
-atlas = ExtResource("1_vko5n")
-region = Rect2(591, 3436, 412, 412)
+atlas = ExtResource("1_kdnea")
+region = Rect2(0, 2240, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_snsub"]
+atlas = ExtResource("1_kdnea")
+region = Rect2(896, 2240, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m2qj0"]
+atlas = ExtResource("1_kdnea")
+region = Rect2(448, 3136, 448, 448)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_uxcxn"]
 atlas = ExtResource("1_vko5n")
@@ -22,39 +23,39 @@ region = Rect2(175, 4268, 412, 412)
 atlas = ExtResource("1_vko5n")
 region = Rect2(591, 4268, 412, 412)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_snsub"]
-atlas = ExtResource("1_vko5n")
-region = Rect2(1007, 3852, 412, 412)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_m2qj0"]
-atlas = ExtResource("1_vko5n")
-region = Rect2(175, 3020, 412, 412)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_uhynq"]
-atlas = ExtResource("1_vko5n")
-region = Rect2(1007, 3020, 412, 412)
+atlas = ExtResource("1_kdnea")
+region = Rect2(896, 3584, 448, 448)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fs1f7"]
-atlas = ExtResource("1_vko5n")
-region = Rect2(591, 3020, 412, 412)
+atlas = ExtResource("1_kdnea")
+region = Rect2(0, 2688, 448, 448)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jgps0"]
-atlas = ExtResource("1_vko5n")
-region = Rect2(591, 2604, 412, 412)
+atlas = ExtResource("1_kdnea")
+region = Rect2(896, 2688, 448, 448)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_48r1y"]
-atlas = ExtResource("1_vko5n")
-region = Rect2(1007, 3436, 412, 412)
+atlas = ExtResource("1_kdnea")
+region = Rect2(448, 2688, 448, 448)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_f4bjy"]
-atlas = ExtResource("1_vko5n")
-region = Rect2(175, 3436, 412, 412)
+atlas = ExtResource("1_kdnea")
+region = Rect2(448, 2240, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_trldb"]
+atlas = ExtResource("1_kdnea")
+region = Rect2(896, 3136, 448, 448)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4guh"]
+atlas = ExtResource("1_kdnea")
+region = Rect2(0, 3136, 448, 448)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vko5n")
+"texture": SubResource("AtlasTexture_5uh8e")
 }],
 "loop": false,
 "name": &"big-smile-closed",
@@ -62,7 +63,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_kdnea")
+"texture": SubResource("AtlasTexture_snsub")
 }],
 "loop": false,
 "name": &"big-smile-opened",
@@ -70,7 +71,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5uh8e")
+"texture": SubResource("AtlasTexture_m2qj0")
 }],
 "loop": false,
 "name": &"circle",
@@ -94,7 +95,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_snsub")
+"texture": SubResource("AtlasTexture_uhynq")
 }],
 "loop": false,
 "name": &"default",
@@ -102,7 +103,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_m2qj0")
+"texture": SubResource("AtlasTexture_fs1f7")
 }],
 "loop": false,
 "name": &"frown-closed",
@@ -110,7 +111,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_uhynq")
+"texture": SubResource("AtlasTexture_jgps0")
 }],
 "loop": false,
 "name": &"frown-open",
@@ -118,7 +119,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fs1f7")
+"texture": SubResource("AtlasTexture_48r1y")
 }],
 "loop": false,
 "name": &"grimace",
@@ -126,7 +127,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jgps0")
+"texture": SubResource("AtlasTexture_f4bjy")
 }],
 "loop": false,
 "name": &"grin",
@@ -134,7 +135,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_48r1y")
+"texture": SubResource("AtlasTexture_trldb")
 }],
 "loop": false,
 "name": &"oval",
@@ -142,7 +143,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_f4bjy")
+"texture": SubResource("AtlasTexture_n4guh")
 }],
 "loop": false,
 "name": &"small-smile",

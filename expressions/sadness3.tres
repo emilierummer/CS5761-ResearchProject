@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_le8ch")
+color = Color(0.015686275, 0, 1, 1)
 eyes = "angled-top"
 mouth = "grimace"
 brows = "down"

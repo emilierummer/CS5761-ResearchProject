@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_7peto")
+color = Color(0.49411765, 0, 0.61960787, 1)
 eyes = "wide-small-pupils"
 mouth = "grimace"
 brows = "flat"

@@ -1,0 +1,9 @@
+[gd_resource type="ShaderMaterial" load_steps=3 format=3 uid="uid://dcj3ny3fpatch"]
+
+[ext_resource type="Shader" uid="uid://cgatwh765isnw" path="res://cues/color-shader.gdshader" id="1_wwial"]
+[ext_resource type="Texture2D" uid="uid://b5efdpxs4mlm0" path="res://cues/final-faces.png" id="2_d3bly"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_wwial")
+shader_parameter/TEXTURE = ExtResource("2_d3bly")

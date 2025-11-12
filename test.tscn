@@ -1,17 +1,32 @@
-[gd_scene load_steps=9 format=3 uid="uid://b4shkq1dtw6x1"]
+[gd_scene load_steps=24 format=3 uid="uid://b4shkq1dtw6x1"]
 
 [ext_resource type="Script" path="res://test.gd" id="1_6uqi0"]
 [ext_resource type="PackedScene" uid="uid://d0itr34bpp8r5" path="res://Robot.tscn" id="1_37kl0"]
 [ext_resource type="Script" uid="uid://bjykxxqurmt73" path="res://expressions/expression.gd" id="2_vbegm"]
 [ext_resource type="Resource" uid="uid://bnpcnwhlyrhy7" path="res://expressions/angry1.tres" id="3_ehkex"]
+[ext_resource type="Resource" uid="uid://b4w5msax0n2or" path="res://expressions/angry2.tres" id="4_a6gra"]
 [ext_resource type="Resource" uid="uid://ck478tn4dy2a" path="res://expressions/joy1.tres" id="4_xersf"]
 [ext_resource type="Resource" uid="uid://clgmq1akx0fja" path="res://expressions/fear1.tres" id="5_00tp4"]
+[ext_resource type="Resource" uid="uid://4vuohh6x3wxd" path="res://expressions/angry3.tres" id="5_dwqlq"]
 [ext_resource type="Resource" uid="uid://bof7ovn823w3j" path="res://expressions/neutral.tres" id="6_ehkex"]
+[ext_resource type="Resource" uid="uid://crr4077qptuek" path="res://expressions/fear2.tres" id="7_15c7i"]
 [ext_resource type="PackedScene" uid="uid://e7d4chb43vmc" path="res://Room.tscn" id="8_ehkex"]
+[ext_resource type="Resource" uid="uid://bn2ln1r1ys1b3" path="res://expressions/fear3.tres" id="8_xpeyw"]
+[ext_resource type="Resource" uid="uid://db3kjokuo26rm" path="res://expressions/joy2.tres" id="10_dpmuy"]
+[ext_resource type="Resource" uid="uid://cxw0bwsa4klxk" path="res://expressions/joy3.tres" id="11_yww54"]
+[ext_resource type="Resource" uid="uid://bymdmswmduoc2" path="res://expressions/love1.tres" id="12_j75vh"]
+[ext_resource type="Resource" uid="uid://l47aqurrjtki" path="res://expressions/love2.tres" id="13_rrpoi"]
+[ext_resource type="Resource" uid="uid://6dbrii24jlbt" path="res://expressions/love3.tres" id="14_34fux"]
+[ext_resource type="Resource" uid="uid://dswnmaqbhcnl2" path="res://expressions/sadness1.tres" id="15_ppv7d"]
+[ext_resource type="Resource" uid="uid://dfebw42fec1sn" path="res://expressions/sadness2.tres" id="16_naet1"]
+[ext_resource type="Resource" uid="uid://dd1dhh78yy8b0" path="res://expressions/sadness3.tres" id="17_6qlrc"]
+[ext_resource type="Resource" uid="uid://cc4uklh856ldg" path="res://expressions/surprise1.tres" id="18_shobf"]
+[ext_resource type="Resource" uid="uid://ln7agqnmebpf" path="res://expressions/surprise2.tres" id="19_lb1cv"]
+[ext_resource type="Resource" uid="uid://bjr6mt0v1edpv" path="res://expressions/surprise3.tres" id="20_2h37t"]
 
 [node name="Test" type="Node3D"]
 script = ExtResource("1_6uqi0")
-expressions = Array[ExtResource("2_vbegm")]([ExtResource("3_ehkex"), ExtResource("4_xersf"), ExtResource("5_00tp4")])
+expressions = Array[ExtResource("2_vbegm")]([ExtResource("3_ehkex"), ExtResource("4_a6gra"), ExtResource("5_dwqlq"), ExtResource("5_00tp4"), ExtResource("7_15c7i"), ExtResource("8_xpeyw"), ExtResource("4_xersf"), ExtResource("10_dpmuy"), ExtResource("11_yww54"), ExtResource("12_j75vh"), ExtResource("13_rrpoi"), ExtResource("14_34fux"), ExtResource("15_ppv7d"), ExtResource("16_naet1"), ExtResource("17_6qlrc"), ExtResource("18_shobf"), ExtResource("19_lb1cv"), ExtResource("20_2h37t")])
 defaultExpression = ExtResource("6_ehkex")
 
 [node name="Robot" parent="." instance=ExtResource("1_37kl0")]

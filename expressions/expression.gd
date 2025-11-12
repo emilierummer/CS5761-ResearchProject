@@ -28,6 +28,10 @@ class_name RobotExpression extends Resource
 
 
 @export_group("Face")
+@export_color_no_alpha var color: Color = Color("#bcbcbc") :
+	set(new):
+		color = new
+		emit_changed()
 @export_enum(
 	"default",
 	"angled-top", 

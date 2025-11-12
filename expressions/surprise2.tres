@@ -4,5 +4,6 @@
 
 [resource]
 script = ExtResource("1_qgwch")
+color = Color(1, 0.48235294, 0, 1)
 eyes = "wide-big-pupils"
 metadata/_custom_type_script = "uid://bjykxxqurmt73"

@@ -4,6 +4,7 @@
 
 [resource]
 script = ExtResource("1_05pnt")
+color = Color(1, 0, 0, 1)
 eyes = "closed-flat"
 brows = "slanted"
 metadata/_custom_type_script = "uid://bjykxxqurmt73"
